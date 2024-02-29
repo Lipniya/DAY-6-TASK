@@ -1,0 +1,64 @@
+1)  class Movie {
+constructor(title, studio, rating = “PG”) {
+this.title = title;
+this.studio = studio;
+this.rating = rating;
+}
+static getPG(movies) {
+return movies.filter(movie => movie.rating === “PG”);
+}
+}
+const casinoRoyale = new Movie(“Casino Royale”, “Eon Productions”, “PG-13”);
+console.log(“Title:”, casinoRoyale.title);
+console.log(“Studio:”, casinoRoyale.studio);
+console.log(“Rating:”, casinoRoyale.rating);
+const moviesArray = [
+new Movie(“Movie1”, “Studio1”, “PG”),
+new Movie(“Movie2”, “Studio2”, “PG-13”),
+new Movie(“Movie3”, “Studio3”, “R”),
+];
+const pgMovies = Movie.getPG(moviesArray);
+console.log(“PG Rated Movies:”);
+pgMovies.forEach(movie => {
+console.log(“Title:”, movie.title, “| Studio:”, movie.studio, “| Rating:”, movie.rating);
+});
+
+
+
+
+2)  class Person {
+constructor(name, age, occupation) {
+this.name = name;
+this.age = age;
+this.occupation = occupation;
+}
+}
+const person = new Person(“Ajith”, 24, “Developer”);
+console.log(“Name:”, person.name);
+console.log(“Age:”, person.age);
+console.log(“Occupation:”, person.occupation);
+
+
+3) class Person {
+  constructor(name, age, country) {
+    this.name = name;
+    this.age = age;
+    this.country = country;
+  }
+
+  displayDetails() {
+    console.log(`Name: ${this.name}`);
+    console.log(`Age: ${this.age}`);
+    console.log(`Country: ${this.country}`);
+  }
+}
+
+const person1 = new Person('Ajith', 24, 'INDIA');
+const person2 = new Person('Lipniya', 23, 'INDIA');
+
+console.log('Person-1 Details:');
+person1.displayDetails();
+
+console.log('\nPerson-2 Details:');
+person2.displayDetails();
+
